@@ -1,0 +1,115 @@
+:root {
+    --lightgreen: #96be25;
+    --arial: Arial, Helvetica, sans-serif;
+    --html-bg-color: #333;
+    --body-bg-color: #222;
+    --text-color: #fff;
+}
+* {
+    font-family: var(--arial);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all 0.2s linear; 
+}
+
+*::selection {
+    background: var(--lightgreen);
+    color: #333;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    font-family: var(--arial);
+}
+
+html::-webkit-scrollbar {
+    width: 1.4rem;
+}
+html::-webkit-scrollbar-track {
+    background:var(--html-bg-color);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--lightgreen);
+}
+
+body {
+    font-family:var(--arial);
+    background: var(--body-bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    padding-left: 35rem; 
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    font-family: var(--arial);
+    background: var(--html-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+header .user img {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .6rem solid  var(--lightgreen);
+}
+header .user .name {
+    font-size: 3.5rem;
+    color: var(--text-color);
+}
+header .user .post {
+    font-size: 3.4rem;
+    color: var(--text-color);
+}
+
+header .navbar {
+    width: 100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a {
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: var(--html-bg-color);
+    color: var(--text-color);
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover {
+    background: var(--lightgreen); 
+}
+
+#menu {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: var(--html-bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
