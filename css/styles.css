@@ -5,6 +5,7 @@
     --body-bg-color: #222;
     --text-color: #fff;
 }
+
 * {
     font-family: var(--arial);
     margin: 0;
@@ -13,7 +14,7 @@
     text-decoration: none;
     outline: none;
     border: none;
-    transition: all 0.2s linear; 
+    transition: all 0.2s linear;
 }
 
 *::selection {
@@ -24,14 +25,14 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
-    font-family: var(--arial);
 }
 
 html::-webkit-scrollbar {
     width: 1.4rem;
 }
+
 html::-webkit-scrollbar-track {
-    background:var(--html-bg-color);
+    background: var(--html-bg-color);
 }
 
 html::-webkit-scrollbar-thumb {
@@ -39,11 +40,10 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    font-family:var(--arial);
     background: var(--body-bg-color);
     color: var(--text-color);
     overflow-x: hidden;
-    padding-left: 35rem; 
+    padding-left: 35rem;
 }
 
 header {
@@ -53,27 +53,24 @@ header {
     z-index: 1000;
     height: 100%;
     width: 35rem;
-    font-family: var(--arial);
     background: var(--html-bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: column;
+    flex-direction: column;
     text-align: center;
 }
+
 header .user img {
     height: 17rem;
     width: 17rem;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border: .6rem solid  var(--lightgreen);
+    border: 0.6rem solid var(--lightgreen);
 }
-header .user .name {
-    font-size: 3.5rem;
-    color: var(--text-color);
-}
-header .user .post {
+
+header .user h3, header .user .post {
     font-size: 3.4rem;
     color: var(--text-color);
 }
@@ -82,7 +79,7 @@ header .navbar {
     width: 100%;
 }
 
-header .navbar ul{
+header .navbar ul {
     list-style: none;
     padding: 1rem 3rem;
 }
@@ -95,21 +92,246 @@ header .navbar ul li a {
     color: var(--text-color);
     font-size: 2rem;
     border-radius: 5rem;
+    text-align: center;
 }
 
 header .navbar ul li a:hover {
-    background: var(--lightgreen); 
+    background: var(--lightgreen);
 }
 
 #menu {
     position: fixed;
     top: 2rem;
     right: 2rem;
-    background: var(--html-bg-color);
-    color: var(--text-color);
+    background: var(--lightgreen); 
+    color: #333; 
     cursor: pointer;
-    font-size: 2.5rem;
+    font-size: 3rem; 
     padding: 1rem 1.5rem;
     z-index: 1000;
     display: none;
+    border-radius: 10%; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    transition: background 0.3s, transform 0.3s; /* Sanfte Übergänge für Benutzerinteraktion */
+}
+
+#menu:hover {
+    background: #76a21e; 
+    transform: scale(1.1); 
+}
+
+#menu {
+    color: #fff; 
+}
+
+section {
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+section .story {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 120px;
+    border: 2px solid var(--lightgreen);
+    margin: 20px 0;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: justify;
+    font-size: 1.6rem;
+    background-color: var(--body-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section .story:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+section .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--arial), sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: var(--lightgreen);
+    text-decoration: none;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section .btn i {
+    margin-left: 8px;
+}
+
+/* Hover-Effekt für Interaktivität */
+section .btn:hover {
+    background-color: #80a74b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Focus-Effekt für Zugänglichkeit */
+section .btn:focus {
+    outline: 3px solid #80a74b;
+    outline-offset: 2px;
+}
+
+/* ###################################################### */
+
+/* Allgemeines Styling für den Abschnitt */
+section.about {
+    padding: 40px 20px; /* Genügend Innenabstand für eine angenehme Darstellung */
+    background-color: var(--html-bg-color); /* Konsistent mit dem vorherigen Design */
+    color: var(--html-bg-color); /* Konsistente Textfarbe */
+    border-radius: 8px; /* Abgerundete Ecken für ein modernes Aussehen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatten für mehr Tiefe */
+}
+
+section.about .heading {
+    text-align: center;
+    font-size: 2rem; /* Größere Schriftgröße für die Überschrift */
+    margin-bottom: 20px; /* Abstand nach unten */
+    color: var(--lightgreen); /* Akzentfarbe für die Überschrift */
+}
+
+section.about .heading span {
+    color: var(--text-color); /* Farbkontrast für den Text */
+}
+
+section.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Abstand zwischen den Elementen */
+    justify-content: center; /* Zentriert die Inhalte */
+}
+
+section.about .info,
+section.about .counter {
+    flex: 1 1 300px; /* Flexibles Layout für verschiedene Bildschirmgrößen */
+    max-width: 500px; /* Maximale Breite für eine bessere Lesbarkeit */
+    padding: 20px;
+    background-color: var(--text-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section.about .info h3 {
+    font-size: 1rem;
+    margin: 10px 0; /* Abstand zwischen den Einträgen */
+}
+
+section.about .info span {
+    font-weight: bold; /* Betont die Beschriftungen */
+    color: var(--lightgreen); /* Konsistente Akzentfarbe */
+}
+
+section.about .counter {
+    display: flex;
+    justify-content: space-around; /* Gleichmäßige Verteilung der Boxen */
+    align-items: center;
+}
+
+section.about .box {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--lightgreen);
+    color: var(--text-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section.about .box span {
+    font-size: 2rem; /* Größere Schriftgröße für Zahlen */
+    display: block;
+    font-weight: bold;
+}
+
+section.about .box h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Button-Styling */
+section .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--arial), sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: var(--lightgreen);
+    text-decoration: none;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px; /* Abstand nach oben */
+}
+
+section .btn i {
+    margin-left: 8px;
+}
+
+section .btn:hover {
+    background-color: #80a74b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+section .btn:focus {
+    outline: 3px solid #80a74b;
+    outline-offset: 2px;
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        padding-left: 0;
+    }
+
+    header {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    header .navbar ul {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    header.toggle {
+        height: 100%;
+    }
+
+    header.toggle .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header.toggle .navbar ul {
+        padding: 1rem;
+    }
+
+    header.toggle .navbar ul li a {
+        margin: 1rem 0;
+        font-size: 2.4rem;
+    }
 }
