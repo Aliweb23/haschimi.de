@@ -152,11 +152,11 @@ section {
 }
 /* Allgemeines Styling für den Home-Bereich */
 section.home {
-    padding: 3.75rem 1.25rem; /* 60px 20px in rem umgerechnet */
-    background-color: var(--body-bg-color); /* Konsistente Hintergrundfarbe */
-    color: var(--text-color); /* Konsistente Textfarbe */
+    padding: 3.75rem 1.25rem; 
+    background-color: var(--body-bg-color); 
+    color: var(--text-color); 
     text-align: center;
-    min-height: 100vh; /* Deckt die gesamte Höhe des Viewports ab */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -168,8 +168,8 @@ section.home h3 {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 0.625rem; /* 10px in rem umgerechnet */
-    color: var(--lightgreen); /* Akzentfarbe */
-    animation: fadeInDown 1s ease-in-out; /* Einfache Einblendung */
+    color: var(--text-color); /* Akzentfarbe */
+    /* animation: fadeInDown 1s ease-in-out; Einfache Einblendung */
 }
 
 /* Styling für den Haupttitel */
