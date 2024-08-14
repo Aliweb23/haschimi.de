@@ -30,4 +30,3 @@
         e.preventDefault(); // Verhindert das Standardverhalten des Links
         window.open($(this).attr('href'), '_blank'); // Öffnet den Link in einem neuen Tab
     });
-});
