@@ -588,6 +588,72 @@ section .counter .box h3 {
     background: var(--html-bg-color);
 }
 
+
+/* ####################################################### */
+/* Allgemeines Styling für den Abschnitt section Projekt */
+.projekte {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.projekte .heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.projekte .heading span {
+    color: #ff6b6b;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-box {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.project-box:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.project-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.project-box:hover img {
+    transform: scale(1.05);
+}
+
+.project-box h5 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.project-box p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 0;
+}
+
+
 /* #################################################### */
 /* Allgemeines Styling für den Abschnitt section Kontakt */
 .kontakt {
