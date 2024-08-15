@@ -479,7 +479,7 @@ section .counter .box h3 {
 .bildung .box {
     background: var(--dashboard-bg-color);
     border-radius: 0.625rem;
-    box-shadow: 0 0.3125rem 0.9375rem var(--text-color);
+    box-shadow: 0 0.3125rem 0.9375rem var(--lightgreen);
     color: var(--lightgreen);
     padding: 1.25rem;
     max-width: 25rem;
@@ -514,10 +514,91 @@ section .counter .box h3 {
     font-size: 1rem;
     color: var(--text-color);
     line-height: 1.6;
+    text-decoration: none;
 }
 
+/* ################################################# */
+/* Allgemeines Styling für den Abschnitt section Portfolio */
+.portfolio {
+    background-color:var(--dashboard-bg-color);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.portfolio .heading {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.portfolio .heading span {
+    color: var(--lightgreen);
+}
+
+.portfolio .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.portfolio .box {
+    background: var(--html-bg-color);
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem var(--text-color);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio .box:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem var(--lightgreen);
+}
+
+.portfolio .box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.portfolio .box:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio .box h5 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 1rem;
+    background: var(--html-bg-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+.portfolio .box a {
+    text-decoration: none;
+}
+
+.portfolio .box a h5 {
+    color: var(--text-color);
+}
+
+.portfolio .box a:hover h5 {
+    background: var(--html-bg-color);
+}
 
 @media (max-width: 768px) {
+    /* Portfolio Section Anpassungen */
+    .portfolio {
+        padding: 2rem 1rem;
+    }
+
+    .portfolio .heading {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Body und Header Anpassungen */
     body {
         padding-left: 0;
     }
@@ -533,6 +614,7 @@ section .counter .box h3 {
         padding: 1rem;
     }
 
+    /* Menü-Button und Navbar Anpassungen */
     #menu {
         display: block;
     }
