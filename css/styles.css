@@ -29,15 +29,15 @@ html {
 }
 
 html::-webkit-scrollbar {
-    width: 1.4rem;
+    width: 1.5rem;
 }
 
 html::-webkit-scrollbar-track {
-    background: var(--html-bg-color);
+    background-color: var(--lightgreen);
 }
 
 html::-webkit-scrollbar-thumb {
-    background: var(--lightgreen);
+    background-color: var(--lightgreen);
 }
 
 body {
@@ -55,6 +55,7 @@ header {
     height: 100%;
     width: 35rem;
     background: var(--body-bg-color);
+    border: 0.02rem solid var(--lightgreen);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,8 +77,9 @@ header .user img {
 /* Hover-Effekt für Interaktivität */
 header .user img:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 0.650rem 1.35rem var(--lightgreen);
 }
+
 
 /* Einblendungsanimation */
 @keyframes fadeIn {
@@ -90,8 +92,6 @@ header .user img:hover {
         transform: scale(1); 
     }
 }
-
-
 header .user h3, header .user .post {
     font-size: 3.5rem;
     color: var(--text-color);
@@ -119,7 +119,7 @@ header .navbar ul li a {
 
 header .navbar ul li a:hover {
     background: var(--lightgreen);
-    color: #222;
+    color: var(--body-bg-color);
 }
 
 #menu {
@@ -134,17 +134,17 @@ header .navbar ul li a:hover {
     z-index: 1000;
     display: none;
     border-radius: 30%; 
-    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 0.25rem 0.375rem var(--text-color); 
     transition: background 0.3s, transform 0.3s;
 }
 
 #menu:hover {
-    background: #76a21e; 
-    transform: scale(1.1); 
+    background: var(--lightgreen); 
+    transform: scale(1.1);
 }
 
 #menu {
-    color: #fff; 
+    color: var(--text-color); 
 }
 
 section {
@@ -166,7 +166,7 @@ section.home {
 
 /* Styling für Begrüßungstext */
 section.home h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 400;
     margin-bottom: 0.625rem; 
     color: var(--text-color); 
@@ -187,9 +187,10 @@ section.home h1 span {
 
 /* Styling für die Beschreibung */
 section.home p.story {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     line-height: 1.6;
     max-width: 50rem; 
+    font-family: var(--arial);
     margin-bottom: 1.875rem;
     animation: fadeInUp 1.4s ease-in-out; 
 }
@@ -200,7 +201,7 @@ section.home .btn {
     align-items: center;
     justify-content: center;
     font-family: var(--arial), sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-color);
     background-color: var(--lightgreen);
@@ -208,7 +209,7 @@ section.home .btn {
     padding: 0.75rem 1.5rem; 
     border: none;
     border-radius: 0.3125rem; 
-    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0.25rem 0.375rem var(--dashboard-bg-color); 
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInUp 1.6s ease-in-out;
 }
@@ -219,9 +220,10 @@ section.home .btn i {
 
 /* Hover-Effekt für Interaktivität */
 section.home .btn:hover {
-    background-color: #80a74b; 
+    background-color: var(--html-bg-color); 
+    color: var(--lightgreen);
     transform: translateY(-0.125rem); 
-    box-shadow: 0 0.375rem 0.5rem rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 0.375rem 0.5rem var(--text-color); 
 }
 
 /* Einblendungsanimationen */
@@ -255,23 +257,22 @@ section.home .btn:hover {
         transform: translateY(0);
     }
 }
-
-
 section .story {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     min-height: 7.5rem; 
-    border: 0.125rem solid var(--lightgreen); 
+    border: 0.125rem solid var(--lightgreen);
+    font-family: var(--arial); 
     margin: 1.25rem 0; 
     padding: 1.25rem; 
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     text-align: justify;
     font-size: 1.6rem;
     background-color: var(--html-bg-color);
     border-radius: 0.5rem; 
-    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 0.25rem 0.375rem var(--html-bg-color); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -286,25 +287,25 @@ section .btn {
     justify-content: center;
     font-family: var(--arial), sans-serif;
     font-size: 1rem; 
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-color);
     background-color: var(--lightgreen);
     text-decoration: none;
     padding: 0.5rem 1rem; 
     border: none;
     border-radius: 0.25rem; 
-    box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0.1875rem 0.375rem var(--text-color); 
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section .btn i {
-    margin-left: 0.5rem; 
+    margin-left: 0.7rem; 
 }
 /* Hover-Effekt für Interaktivität */
 section .btn:hover {
     background-color: var(--lightgreen);
     transform: translateY(-0.125rem); 
-    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 0.375rem 0.75rem var(--text-color); 
 }
 
 /* Focus-Effekt für Zugänglichkeit */
@@ -315,21 +316,20 @@ section .btn:focus {
 
 
 /* ###################################################### */
-
 /* Allgemeines Styling für den Abschnitt section about */
 section.about {
     background-color: var(--dashboard-bg-color);
-    padding: 2.5rem 1.25rem; 
-    color: var(--lightgreen); 
-    border-radius: 0.5rem; 
-    box-shadow: 0 0.25rem 0.5rem var(--text-color); 
+    padding: 2.5rem 1.25rem;
+    margin: 1.5rem 0; 
+    color: var(--lightgreen);
+    border-radius: 0.5rem;
+    /* box-shadow: 0 0.25rem 0.5rem var(--html-bg-color); */
 }
-
 section.about .heading {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1.25rem; 
-    color: var(--lightgreen);
+    color: var(--text-color);
 }
 
 section.about .heading span {
@@ -339,7 +339,7 @@ section.about .heading span {
 section.about .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.25rem; 
+    gap: 1.30rem; 
     justify-content: center; 
     background: transparent;
 }
@@ -351,18 +351,18 @@ section.about .counter {
     padding: 1.25rem; 
     background-color: var(--html-bg-color);
     border-radius: 0.5rem; 
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 0.25rem 0.5rem var(--lightgreen); 
 }
 
 section.about .info h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 0.5rem 0; 
 }
 
 section.about .info span {
-    font-weight: bold; 
+    font-weight: initial; 
     color: var(--text-color); 
-    font-style: bold;
+    font-style: bolder;
 }
 
 /* Button-Styling */
@@ -371,7 +371,7 @@ section .cv {
     align-items: center;
     justify-content: center;
     font-family: var(--arial), sans-serif;
-    font-size: 0.8rem; 
+    font-size: 1.2rem; 
     font-weight: 700;
     color: var(--text-color);
     background-color: var(--lightgreen);
@@ -379,7 +379,7 @@ section .cv {
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 0.3125rem;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0.25rem 0.5rem var(--body-bg-color); 
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     margin-top: 1.25rem; 
 }
@@ -391,7 +391,8 @@ section .cv i {
 section .cv:hover {
     background-color:var(--lightgreen);
     transform: translateY(-0.125rem); 
-    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 0.375rem 0.75rem var(--text-color); 
+    color: var(--body-bg-color);
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     margin-top: 1.25rem; 
 }
@@ -405,9 +406,9 @@ section .btn:focus {
 section .counter {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem; 
-    justify-content: center;
-    margin: 2rem 0; 
+    gap: 1.6rem; 
+    justify-content: space-evenly;
+    margin: 3rem 0; 
 }
 
 /* Styling für die Boxen im Counter-Bereich */
@@ -438,15 +439,15 @@ section .counter .box:hover {
 
 /* Styling für die span innerhalb der Boxen */
 section .counter .box span {
-    font-size: 2.5rem; 
+    font-size: 2.2rem; 
     display: block;
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: 0.5rem; 
 }
 
 /* Styling für die h3 innerhalb der Boxen */
 section .counter .box h3 {
-    font-size: 1.125rem; 
+    font-size: 1.2rem; 
     margin: 0;
 }
 
@@ -466,14 +467,14 @@ section .counter .box h3 {
 }
 
 .bildung .heading span {
-    color: var(--lightgreen);
+    color: var(--text-color);
 }
 
 .bildung .box-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.25rem;
+    gap: 1.3rem;
 }
 
 .bildung .box {
@@ -481,10 +482,11 @@ section .counter .box h3 {
     border-radius: 0.625rem;
     box-shadow: 0 0.3125rem 0.9375rem var(--lightgreen);
     color: var(--lightgreen);
-    padding: 1.25rem;
+    padding: 1.3rem;
     max-width: 25rem;
     text-align: center;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .bildung .box:hover {
@@ -492,27 +494,31 @@ section .counter .box h3 {
 }
 
 .bildung .box i {
-    font-size: 3rem;
+    font-size: 4.5rem;
     color: var(--lightgreen);
     margin-bottom: 0.625rem;
+    cursor: pointer;
 }
 
 .bildung .box span {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--text-color);
     display: block;
     margin-bottom: 0.625rem;
 }
 
 .bildung .box h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: var(--text-color);
     margin-bottom: 0.9375rem;
 }
 
 .bildung .box p {
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: var(--text-color);
+    align-items: center;
+    justify-content: center;
+    content: initial;  
     line-height: 1.6;
     text-decoration: none;
 }
@@ -532,7 +538,7 @@ section .counter .box h3 {
 }
 
 .portfolio .heading span {
-    color: var(--lightgreen);
+    color: var(--text-color);
 }
 
 .portfolio .box-container {
@@ -567,9 +573,9 @@ section .counter .box h3 {
 }
 
 .portfolio .box h5 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--text-color);
-    padding: 1rem;
+    padding: 1.2rem;
     background: var(--html-bg-color);
     color: var(--text-color);
     margin: 0;
@@ -578,11 +584,6 @@ section .counter .box h3 {
 .portfolio .box a {
     text-decoration: none;
 }
-
-.portfolio .box a h5 {
-    color: var(--text-color);
-}
-
 .portfolio .box a:hover h5 {
     background: var(--html-bg-color);
 }
@@ -591,7 +592,7 @@ section .counter .box h3 {
 /* Allgemeines Styling für den Abschnitt section Kontakt */
 .kontakt {
     background-color: var(--dashboard-bg-color);
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     text-align: center;
 }
 
@@ -602,7 +603,7 @@ section .counter .box h3 {
 }
 
 .kontakt .heading span {
-    color: var(--lightgreen);
+    color: var(--text-color);
 }
 
 .kontakt .row {
@@ -625,7 +626,7 @@ section .counter .box h3 {
 }
 
 .kontakt .info h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text-color);
     margin-bottom: 1rem;
     display: flex;
@@ -641,7 +642,7 @@ section .counter .box h3 {
     flex: 1;
     max-width: 600px;
     background: var(--html-bg-color);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 1rem;
     box-shadow: 0 0.5rem 1.5rem var(--lightgreen);
 }
@@ -652,11 +653,11 @@ section .counter .box h3 {
     margin-bottom: 1rem;
     border: 1px solid var(--text-color);
     border-radius: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 .kontakt form .box.message {
-    height: 150px;
+    height: 9.375rem; 
     resize: none;
 }
 
@@ -666,45 +667,50 @@ section .counter .box h3 {
     padding: 1rem 2rem;
     border: none;
     border-radius: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .kontakt form .btn:hover {
     background-color: var(--lightgreen);
+    color: var(--body-bg-color);
 }
 
 .kontakt .follow {
-    font-size: 1.5rem;
-    margin-top: 3rem;
+    font-size: 1.8rem;
+    margin-top: 5rem;
     color: var(--text-color);
 }
 
 .kontakt .contact-links {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.2rem;
     margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .kontakt .contact-links .icon {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;  
+    height: 2.5rem;
     transition: transform 0.3s ease;
+    color: var(--text-color);
 }
 
 .kontakt .contact-links .icon:hover {
     transform: scale(1.1);
+    color: var(--lightgreen);
 }
 
 footer {
     background-color: var(--body-bg-color);
     color: var(--lightgreen);
     text-align: center;
-    padding: 1rem 0;
+    padding: 3rem 0;
     margin-top: 3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 
