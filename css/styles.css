@@ -232,6 +232,35 @@ header .navbar ul li a:hover {
     background: var(--lightgreen);
     color: var(--body-bg-color);
 }
+
+/* #################################################################### */
+/* ######################################################################### */
+header .social-media {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+header .social-media a {
+    color: var(--text-color);
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px;
+    margin-top: +25px;
+    border-radius: 100%;
+    background-color: var(--html-bg-color);
+    transition: background-color 0.3s ease;
+}
+
+header .social-media a:hover {
+    background-color: var(--lightgreen);
+    color: var(--body-bg-color);
+}
+
+/* ####################################################################### */
+/* ########################################################################## */
+
 /* Hamburger-Menü (standardmäßig versteckt) */
 #menu {
     position: fixed;
