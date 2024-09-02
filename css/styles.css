@@ -159,6 +159,7 @@ header.toggle .navbar {
     background: var(--body-bg-color);
     padding: 1rem 0;
     border: 0.0625rem solid var(--lightgreen);
+    border-radius: 5%;
     background: var(--body-bg-color);
   }
 
