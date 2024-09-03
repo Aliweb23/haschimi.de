@@ -35,3 +35,11 @@ $(window).on('scroll load', function() {
         e.preventDefault(); 
         window.open($(this).attr('href'), '_blank'); 
     });
+
+    // zurück nach oben
+    document.getElementById('backToTopBtn').addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });

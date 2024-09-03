@@ -235,14 +235,14 @@ header .navbar ul li a:hover {
 
 /* #################################################################### */
 /* ######################################################################### */
-header .social-media {
+.kontakt .social-media {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 16px;
 }
 
-header .social-media a {
+.kontakt .social-media a {
     color: var(--text-color);
     font-size: 18px;
     text-decoration: none;
@@ -253,7 +253,7 @@ header .social-media a {
     transition: background-color 0.3s ease;
 }
 
-header .social-media a:hover {
+.kontakt .social-media a:hover {
     background-color: var(--lightgreen);
     color: var(--body-bg-color);
 }
@@ -1076,6 +1076,27 @@ section .counter .box h3 {
     transform: scale(1.1);
     color: var(--lightgreen);
 }
+/* ####################################################### */
+
+.kontakt #backToTopBtn {
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.kontakt #backToTopBtn img {
+    width: 30px;
+    height: 30px;
+}
+
+.kontakt #backToTopBtn:hover {
+    background-color: #0056b3;
+}
+/* ######################################################### */
 
 footer {
     background-color: var(--body-bg-color);
