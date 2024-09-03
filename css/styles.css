@@ -1077,24 +1077,24 @@ section .counter .box h3 {
     color: var(--lightgreen);
 }
 /* ####################################################### */
-
 .kontakt #backToTopBtn {
-    background-color: #007bff;
+    background-color: var(--text-color);
     border: none;
     border-radius: 50%;
     padding: 10px;
+    padding-bottom: 18px; 
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
 }
 
 .kontakt #backToTopBtn img {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: auto;
 }
 
 .kontakt #backToTopBtn:hover {
-    background-color: #0056b3;
+    background-color: var(--lightgreen);
 }
 /* ######################################################### */
 
