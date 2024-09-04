@@ -1077,25 +1077,48 @@ section .counter .box h3 {
     color: var(--lightgreen);
 }
 /* ####################################################### */
+/* Bessere Struktur und Lesbarkeit durch eine eigene Klasse für die Linie */
+.custom-hr {
+    border: 3px solid var(--lightgreen);
+    margin-bottom: 20px; /* für einen sauberen Abstand */
+}
+
+/* Verbessertes Design für den Back-to-Top-Button */
 .kontakt #backToTopBtn {
     background-color: var(--text-color);
     border: none;
     border-radius: 50%;
-    padding: 10px;
-    padding-bottom: 18px; 
+    padding: 15px; /* Einheitliches Padding */
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-}
-
-.kontakt #backToTopBtn img {
-    width: 60px;
-    height: auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: fixed; /* Damit der Button beim Scrollen sichtbar bleibt */
+    bottom: 20px;
+    right: 20px; /* Button in der Ecke des Bildschirms positionieren */
+    z-index: 100; /* Damit der Button über anderem Inhalt liegt */
 }
 
 .kontakt #backToTopBtn:hover {
     background-color: var(--lightgreen);
+    transform: scale(1.1); /* Visuelles Feedback bei Hover */
 }
+
+.kontakt #backToTopBtn:focus {
+    outline: 2px dashed var(--lightgreen); /* Fokuszustand für Barrierefreiheit */
+}
+
+/* Optional: Sanftes Scrollen */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Icon Styling (falls benötigt) */
+box-icon {
+    width: 30px; /* Einheitliche Größe für das Icon */
+    height: auto;
+    fill: var(--lightgreen); /* Farbe des Icons */
+}
+
 /* ######################################################### */
 
 footer {
