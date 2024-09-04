@@ -1080,10 +1080,11 @@ section .counter .box h3 {
 /* Bessere Struktur und Lesbarkeit durch eine eigene Klasse für die Linie */
 /* Styling für die grüne Linie (custom-hr) */
 /* Styling für die grüne Linie (custom-hr) */
+/* Style für die grüne Linie */
 .kontakt div.top .custom-hr {
-    border: 3px solid var(--lightgreen); /* Die grüne Linie */
-    margin-top: 3rem;
-    margin-bottom: 2rem; /* Weniger Abstand unten */
+    border: 0.125rem solid var(--lightgreen); /* Die grüne Linie, 2px = 0.125rem */
+    margin-top: 2.2rem; /* 3.5rem in px sind ca. 56px, also etwa 2.2rem */
+    margin-bottom: 1.875rem; /* 3rem in px sind ca. 48px, also etwa 1.875rem */
     position: relative;
 }
 
@@ -1091,25 +1092,30 @@ section .counter .box h3 {
 .kontakt div.top .icon {
     background-color: var(--text-color); /* Neutrale Hintergrundfarbe */
     border: none;
-    border-radius: 60%;
-    padding: 20px; /* Größeres Padding für besseren Effekt */
+    border-radius: 50%;
+    padding: 0.625rem; /* 10px in rem */
     cursor: pointer;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Dezenter Schatten für Tiefenwirkung */
+    box-shadow: 0 0.375rem 0.75rem var(--lightgreen); /* Dezenter Schatten, 6px und 12px in rem */
     transition: background-color 0.3s ease, transform 0.3s ease;
     position: relative; /* Damit der Button unter der Linie bleibt */
     top: 100%; /* Positioniert den Button unter der Linie */
-    left: 50%; /* Zentriert den Button horizontal */
-    transform: translateX(-50%); /* Horizontale Zentrierung korrigieren */
-    z-index: 10; /* Damit der Button sichtbar bleibt */
+    /* left: 0%;  */
+    font-weight: bolder;
+    color: var(--body-bg-color);
+    transform: translateX(-1rem); /* Horizontale Zentrierung korrigieren */
+    z-index: 1000; /* Damit der Button sichtbar bleibt */
 }
 
 .kontakt div.top .icon:hover {
     background-color: var(--lightgreen); /* Farbe ändert sich bei Hover */
     transform: scale(1.1); /* Leichter Skalierungseffekt bei Hover */
+    font-weight: bolder;
+    color: var(--body-bg-color);
 }
 
 .kontakt div.top .icon:focus {
-    outline: 2px dashed var(--lightgreen); /* Fokuszustand für Barrierefreiheit */
+    outline: 0.125rem dashed var(--lightgreen); /* Fokuszustand für Barrierefreiheit, 2px = 0.125rem */
+    font-weight: bolder;
 }
 
 /* Optional: Sanftes Scrollen */
@@ -1119,7 +1125,7 @@ html {
 
 /* Styling für das Icon (Boxicons) */
 box-icon {
-    width: 40px; /* Einheitliche Größe für das Icon */
+    width: 2.5rem; /* 40px in rem */
     height: auto;
     fill: var(--lightgreen); /* Icon-Farbe */
 }
