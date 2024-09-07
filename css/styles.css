@@ -236,10 +236,6 @@ section {
     min-height: 100vh;
     padding: 1rem;
 }
-
-
-
-/* Ab hier morgen weiter kontrollieren bzw. ändern und neue style geben */
 /* ################################################################ */
 /* Allgemeines Styling für den Home-Bereich */
 section.home {
@@ -255,43 +251,43 @@ section.home {
 }
 
 /* Styling für Begrüßungstext */
+section.home h3, 
+section.home h1, 
+section.home p.story {
+    color: var(--text-color); 
+    animation: fadeInUp 1.2s ease-in-out; /* Standardanimation */
+}
+
 section.home h3 {
     font-size: 2rem;
     font-weight: 400;
-    margin-bottom: 0.625rem; 
-    color: var(--text-color); 
+    margin-bottom: 0.625rem;
 }
 
-/* Styling für den Haupttitel */
 section.home h1 {
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 1.25rem; 
-    color: var(--text-color);
-    animation: fadeIn 1.2s ease-in-out; 
+    margin-bottom: 1.25rem;
 }
 
 section.home h1 span {
     color: var(--lightgreen);
 }
 
-/* Styling für die Beschreibung */
 section.home p.story {
     font-size: 1.4rem;
     line-height: 1.6;
     max-width: 50rem; 
-    font-family: var(--arial);
     margin-bottom: 1.875rem;
-    animation: fadeInUp 1.4s ease-in-out; 
 }
 
-/* Styling für den Button */
-section.home .btn {
+/* Styling für Buttons */
+section.home .btn, 
+section .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-family: var(--arial), sans-serif;
-    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-color);
     background-color: var(--lightgreen);
@@ -304,56 +300,32 @@ section.home .btn {
     animation: fadeInUp 1.6s ease-in-out;
 }
 
-section.home .btn i {
-    margin-left: 0.5rem; 
-}
-
-/* Hover-Effekt für Interaktivität */
-section.home .btn:hover {
+section.home .btn:hover, 
+section .btn:hover {
     background-color: var(--html-bg-color); 
     color: var(--lightgreen);
     transform: translateY(-0.125rem); 
     box-shadow: 0 0.375rem 0.5rem var(--text-color); 
 }
 
-/* Einblendungsanimationen */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* Focus-Effekt für Zugänglichkeit */
+section .btn:focus {
+    outline: 0.1875rem solid var(--lightgreen); 
+    outline-offset: 0.125rem; 
 }
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-1.25rem); 
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+section.home .btn i,
+section .btn i {
+    margin-left: 0.5rem; 
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(1.25rem); 
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+/* Styling für die Story Box */
 section .story {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     min-height: 7.5rem; 
     border: 0.125rem solid var(--lightgreen);
-    font-family: var(--arial); 
     margin: 1.25rem 0; 
     padding: 1.25rem; 
     justify-content: space-around;
@@ -371,50 +343,27 @@ section .story:hover {
     box-shadow: 0 0.375rem 0.75rem var(--lightgreen);
 }
 
-section .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--arial), sans-serif;
-    font-size: 1rem; 
-    font-weight: 600;
-    color: var(--text-color);
-    background-color: var(--lightgreen);
-    text-decoration: none;
-    padding: 0.5rem 1rem; 
-    border: none;
-    border-radius: 0.25rem; 
-    box-shadow: 0 0.1875rem 0.375rem var(--text-color); 
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+/* Animationen */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(1.25rem); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
-section .btn i {
-    margin-left: 0.7rem; 
-}
-/* Hover-Effekt für Interaktivität */
-section .btn:hover {
-    background-color: var(--lightgreen);
-    transform: translateY(-0.125rem); 
-    box-shadow: 0 0.375rem 0.75rem var(--text-color); 
-}
-
-/* Focus-Effekt für Zugänglichkeit */
-section .btn:focus {
-    outline: 0.1875rem solid var(--lightgreen); 
-    outline-offset: 0.125rem; 
-}
-
-
 /* ###################################################### */
-/* Allgemeines Styling für den Abschnitt section about */
+//* Allgemeines Styling für den About-Abschnitt */
 section.about {
     background-color: var(--dashboard-bg-color);
     padding: 2.5rem 1.25rem;
     margin: 1.5rem 0; 
     color: var(--lightgreen);
     border-radius: 0.5rem;
-    /* box-shadow: 0 0.25rem 0.5rem var(--html-bg-color); */
 }
+
 section.about .heading {
     text-align: center;
     font-size: 2rem;
@@ -422,16 +371,11 @@ section.about .heading {
     color: var(--text-color);
 }
 
-section.about .heading span {
-    color: var(--text-color); 
-}
-
 section.about .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.30rem; 
+    gap: 1.3rem; 
     justify-content: center; 
-    background: transparent;
 }
 
 section.about .info,
@@ -441,18 +385,18 @@ section.about .counter {
     padding: 1.25rem; 
     background-color: var(--html-bg-color);
     border-radius: 0.5rem; 
-    box-shadow: 0 0.25rem 0.5rem var(--lightgreen); 
+    box-shadow: 0 0.25rem 0.5rem var(--lightgreen);
 }
 
-section.about .info h3 {
+section.about .info h3,
+section.about .counter .box h3 {
     font-size: 1.2rem;
     margin: 0.5rem 0; 
 }
 
 section.about .info span {
-    font-weight: initial; 
+    font-weight: bold; 
     color: var(--text-color); 
-    font-style: bolder;
 }
 
 /* Button-Styling */
@@ -467,29 +411,21 @@ section .cv {
     background-color: var(--lightgreen);
     text-decoration: none;
     padding: 0.75rem 1.5rem;
-    border: none;
     border-radius: 0.3125rem;
     box-shadow: 0 0.25rem 0.5rem var(--body-bg-color); 
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     margin-top: 1.25rem; 
 }
 
-section .cv i {
-    margin-left: 0.5rem;
-}
-
 section .cv:hover {
-    background-color:var(--lightgreen);
+    background-color: var(--html-bg-color);
+    color: var(--lightgreen);
     transform: translateY(-0.125rem); 
     box-shadow: 0 0.375rem 0.75rem var(--text-color); 
-    color: var(--body-bg-color);
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 1.25rem; 
 }
 
-section .btn:focus {
-    outline: 0.1875rem solid var(--lightgreen); 
-    outline-offset: 0.125rem;
+section .cv i {
+    margin-left: 0.5rem;
 }
 
 /* Styling für den Counter-Bereich */
@@ -501,7 +437,6 @@ section .counter {
     margin: 3rem 0; 
 }
 
-/* Styling für die Boxen im Counter-Bereich */
 section .counter .box {
     text-align: center;
     padding: 1.5rem; 
@@ -521,10 +456,6 @@ section .counter .box:hover {
     box-shadow: 0 0.5rem 1rem var(--text-color); 
     background-color: var(--lightgreen);
     color: var(--text-color);
-    box-shadow: 0 0.375rem 0.75rem var(--dashboard-bg-color); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 15rem; 
-    flex: 1 1 20rem; 
 }
 
 /* Styling für die span innerhalb der Boxen */
@@ -535,17 +466,9 @@ section .counter .box span {
     margin-bottom: 0.5rem; 
 }
 
-/* Styling für die h3 innerhalb der Boxen */
-section .counter .box h3 {
-    font-size: 1.2rem; 
-    margin: 0;
-}
-
-
 /* ######################################################## */
-/* Allgemeines Styling für den Abschnitt section bildung */
+/* Allgemeines Styling für den Abschnitt 'bildung' */
 .bildung {
-    /* background-color: var(--body-bg-color); */
     padding: 3rem 0;
 }
 
@@ -568,26 +491,26 @@ section .counter .box h3 {
 }
 
 .bildung .box {
-    background: var(--dashboard-bg-color);
+    background-color: var(--dashboard-bg-color);
     border-radius: 0.625rem;
     box-shadow: 0 0.3125rem 0.9375rem var(--lightgreen);
     color: var(--lightgreen);
     padding: 1.3rem;
     max-width: 25rem;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
 .bildung .box:hover {
     transform: translateY(-0.625rem);
+    box-shadow: 0 0.5rem 1.25rem var(--text-color);
 }
 
 .bildung .box i {
     font-size: 4.5rem;
     color: var(--lightgreen);
     margin-bottom: 0.625rem;
-    cursor: pointer;
 }
 
 .bildung .box span {
@@ -606,17 +529,14 @@ section .counter .box h3 {
 .bildung .box p {
     font-size: 1.3rem;
     color: var(--text-color);
-    align-items: center;
-    justify-content: center;
-    content: initial;  
     line-height: 1.6;
-    text-decoration: none;
+    text-align: center;
 }
 
 /* ################################################# */
-/* Allgemeines Styling für den Abschnitt section Portfolio */
+/* Allgemeines Styling für den Abschnitt 'portfolio' */
 .portfolio {
-    background-color:var(--dashboard-bg-color);
+    background-color: var(--dashboard-bg-color);
     padding: 4rem 2rem;
     text-align: center;
 }
@@ -639,7 +559,7 @@ section .counter .box h3 {
 }
 
 .portfolio .box {
-    background: var(--html-bg-color);
+    background-color: var(--html-bg-color);
     border-radius: 1rem;
     box-shadow: 0 0.5rem 1.5rem var(--text-color);
     overflow: hidden;
@@ -664,40 +584,36 @@ section .counter .box h3 {
 
 .portfolio .box h5 {
     font-size: 1.5rem;
-    color: var(--text-color);
     padding: 1.2rem;
-    background: var(--html-bg-color);
-    color: var(--text-color);
     margin: 0;
+    background-color: var(--html-bg-color);
+    color: var(--text-color);
 }
 
 .portfolio .box a {
     text-decoration: none;
 }
+
 .portfolio .box a:hover h5 {
-    background: var(--html-bg-color);
+    background-color: var(--html-bg-color);
 }
 
-
 /* ####################################################### */
-/* Allgemeines Styling für den Abschnitt section Projekt */
-.projekte {
-    background-color:var(--dashboard-bg-color);
-    background-color:var(--dashboard-bg-color);
+/* Allgemeines Styling für den Abschnitt 'projekte' */
+.projekten {
+    background-color: var(--dashboard-bg-color);
     padding: 4rem 2rem;
     text-align: center;
 }
 
-.projekte .heading {
+.projekten .heading {
     font-size: 2.5rem;
-    color: var(--text-color);
-    color: var(--text-color);
     margin-bottom: 3rem;
+    color: var(--text-color);
 }
 
-.projekte .heading span {
-    color: var(--text-color);
-    color: var(--text-color);
+.projekten .heading span {
+    color: var(--text-color); /* Gleicher Stil wie im Portfolio-Bereich */
 }
 
 .project-container {
@@ -709,9 +625,7 @@ section .counter .box h3 {
 
 .project-box {
     background: var(--html-bg-color);
-    background: var(--html-bg-color);
     border-radius: 1rem;
-    box-shadow: 0 0.5rem 1.5rem var(--lightgreen);
     box-shadow: 0 0.5rem 1.5rem var(--lightgreen);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -722,7 +636,6 @@ section .counter .box h3 {
 .project-box:hover {
     transform: translateY(-0.5rem);
     box-shadow: 0 1rem 2rem var(--text-color);
-    box-shadow: 0 1rem 2rem var(--text-color);
 }
 
 .project-box img {
@@ -731,24 +644,14 @@ section .counter .box h3 {
     display: block;
     border-radius: 10%;
     border: 0.2rem solid var(--text-color);
-    border-radius: 10%;
-    border: 0.2rem solid var(--text-color);
     margin-bottom: 1rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, border-radius 0.3s ease;
 }
 
 .project-box:hover img {
-    width: 100%;
-    height: auto;
-    display: block;
-    width: 100%;
-    height: auto;
-    display: block;
     transform: scale(1.05);
     border-radius: 5%;
     border: 0.2rem solid var(--lightgreen);
-    border-radius: 5%;
-    border: 0.2rem solid var(--lightgreen);
 }
 
 .project-box h2 {
@@ -758,99 +661,55 @@ section .counter .box h3 {
     color: var(--lightgreen);
     margin-bottom: 0.8rem;
     background: transparent;
-  }
-.project-box h2:hover{
+}
+
+.project-box h2:hover {
     color: var(--text-color);
 }
-.project-box h2 {
-    text-align: center;
-    font-size: 2.2rem;
-    text-decoration-line: underline;
-    color: var(--lightgreen);
-    margin-bottom: 0.8rem;
-    background: transparent;
-  }
-.project-box h2:hover{
-    color: var(--text-color);
-}
+
 .project-box p {
     text-align: justify;
     font-size: 1.6rem;
-    /* color: var(--text-color); */
-    text-align: justify;
-    font-size: 1.6rem;
-    /* color: var(--text-color); */
     margin-bottom: 0;
 }
+
 .project-box p:hover {
     color: var(--lightgreen);
 }
 
+/* Styling für die Info-Schaltfläche */
 .p-info {
-    background-color: var(--lightgreen); 
-    border: none; 
-    border-radius: 0.5rem; 
-    padding: 0.8rem 2rem; 
+    background-color: var(--lightgreen);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.8rem 2rem;
     margin-top: 1rem;
-    font-size: 1rem; 
-    color: var(--text-color); 
-    cursor: pointer; 
-    text-transform: uppercase; 
-    letter-spacing: 0.05rem; 
-    transition: background-color 0.3s ease, transform 0.3s ease; 
-    display: inline-block; 
+    font-size: 1rem;
+    color: var(--text-color);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
 }
 
 .p-info:hover {
-    transform: translateY(-0.2rem); 
-    box-shadow: 0 0.25rem 0.375rem var(--dashboard-bg-color); 
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.25rem 0.375rem var(--dashboard-bg-color);
 }
 
 .p-info a {
-    color: inherit; 
-    text-decoration: none; 
+    color: inherit;
+    text-decoration: none;
     display: block;
-    width: 100%; 
-    height: 100%; 
-    text-align: center; 
-}
-.project-box p:hover {
-    color: var(--lightgreen);
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
-.p-info {
-    background-color: var(--lightgreen); 
-    border: none; 
-    border-radius: 0.5rem; 
-    padding: 0.8rem 2rem; 
-    margin-top: 1rem;
-    font-size: 1rem; 
-    color: var(--text-color); 
-    cursor: pointer; 
-    text-transform: uppercase; 
-    letter-spacing: 0.05rem; 
-    transition: background-color 0.3s ease, transform 0.3s ease; 
-    display: inline-block; 
-}
-
-.p-info:hover {
-    transform: translateY(-0.2rem); 
-    box-shadow: 0 0.25rem 0.375rem var(--dashboard-bg-color); 
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.p-info a {
-    color: inherit; 
-    text-decoration: none; 
-    display: block;
-    width: 100%; 
-    height: 100%; 
-    text-align: center; 
-}
 
 /* #################################################### */
-/* Allgemeines Styling für den Abschnitt section Kontakt */
+/* Allgemeines Styling für den Abschnitt 'kontakt' */
 .kontakt {
     background-color: var(--dashboard-bg-color);
     padding: 3rem 2rem;
@@ -859,12 +718,12 @@ section .counter .box h3 {
 
 .kontakt .heading {
     font-size: 2.5rem;
-    color: var(--text-color);
     margin-bottom: 3rem;
+    color: var(--text-color);
 }
 
 .kontakt .heading span {
-    color: var(--text-color);
+    color: var(--text-color); /* Konsistent mit anderen Abschnitten */
 }
 
 .kontakt .row {
@@ -896,7 +755,7 @@ section .counter .box h3 {
 
 .kontakt .info h3 i {
     margin-right: 0.5rem;
-    color: var(--lightgreen);
+    color: var(--lightgreen); /* Konsistente Farbgestaltung */
 }
 
 .kontakt form {
@@ -918,7 +777,7 @@ section .counter .box h3 {
 }
 
 .kontakt form .box.message {
-    height: 9.375rem; 
+    height: 9.375rem;
     resize: none;
 }
 
@@ -930,12 +789,12 @@ section .counter .box h3 {
     border-radius: 0.5rem;
     font-size: 1.3rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .kontakt form .btn:hover {
     background-color: var(--lightgreen);
-    color: var(--body-bg-color);
+    color: var(--body-bg-color); /* Hintergrundfarbe beim Hover */
 }
 
 .kontakt .follow {
@@ -954,7 +813,7 @@ section .counter .box h3 {
 }
 
 .kontakt .contact-links .icon {
-    width: 2.5rem;  
+    width: 2.5rem;
     height: 2.5rem;
     transition: transform 0.3s ease;
     color: var(--text-color);
@@ -962,64 +821,56 @@ section .counter .box h3 {
 
 .kontakt .contact-links .icon:hover {
     transform: scale(1.1);
-    color: var(--lightgreen);
+    color: var(--lightgreen); /* Farbe beim Hover für Konsistenz */
 }
+
 /* ####################################################### */
-/* Bessere Struktur und Lesbarkeit durch eine eigene Klasse für die Linie */
-/* Styling für die grüne Linie (custom-hr) */
-/* Styling für die grüne Linie (custom-hr) */
-/* Style für die grüne Linie */
+/* Grüne Linie und Back-to-Top-Button */
 .kontakt div.top .custom-hr {
-    border: 0.125rem solid var(--lightgreen); /* Die grüne Linie, 2px = 0.125rem */
-    margin-top: 2.2rem; /* 3.5rem in px sind ca. 56px, also etwa 2.2rem */
-    margin-bottom: 1.875rem; /* 3rem in px sind ca. 48px, also etwa 1.875rem */
+    border: 0.125rem solid var(--lightgreen);
+    margin: 2.2rem 0 1.875rem;
     position: relative;
 }
 
-/* Design für den Back-to-Top-Button unter der Linie */
+/* Back-to-Top-Button Styling */
 .kontakt div.top .icon {
-    background-color: var(--text-color); /* Neutrale Hintergrundfarbe */
+    background-color: var(--text-color);
     border: none;
     border-radius: 50%;
-    padding: 0.625rem; /* 10px in rem */
+    padding: 0.625rem;
     cursor: pointer;
-    box-shadow: 0 0.375rem 0.75rem var(--lightgreen); /* Dezenter Schatten, 6px und 12px in rem */
+    box-shadow: 0 0.375rem 0.75rem var(--lightgreen);
     transition: background-color 0.3s ease, transform 0.3s ease;
-    position: relative; /* Damit der Button unter der Linie bleibt */
-    top: 100%; /* Positioniert den Button unter der Linie */
-    /* left: 0%;  */
-    font-weight: bolder;
     color: var(--body-bg-color);
-    transform: translateX(-1rem); /* Horizontale Zentrierung korrigieren */
-    z-index: 1000; /* Damit der Button sichtbar bleibt */
+    transform: translateX(-1rem);
+    z-index: 1000;
 }
 
 .kontakt div.top .icon:hover {
-    background-color: var(--lightgreen); /* Farbe ändert sich bei Hover */
-    transform: scale(1.1); /* Leichter Skalierungseffekt bei Hover */
-    font-weight: bolder;
+    background-color: var(--lightgreen);
+    transform: scale(1.1);
     color: var(--body-bg-color);
 }
 
 .kontakt div.top .icon:focus {
-    outline: 0.125rem dashed var(--lightgreen); /* Fokuszustand für Barrierefreiheit, 2px = 0.125rem */
-    font-weight: bolder;
+    outline: 0.125rem dashed var(--lightgreen);
 }
 
-/* Optional: Sanftes Scrollen */
+/* Sanftes Scrollen */
 html {
     scroll-behavior: smooth;
 }
 
-/* Styling für das Icon (Boxicons) */
+/* Icon Boxicons Styling */
 box-icon {
-    width: 2.5rem; /* 40px in rem */
+    width: 2.5rem;
     height: auto;
-    fill: var(--lightgreen); /* Icon-Farbe */
+    fill: var(--lightgreen);
 }
 
 /* ######################################################### */
 
+/* Footer Styling */
 footer {
     background-color: var(--body-bg-color);
     color: var(--text-color);
@@ -1028,14 +879,14 @@ footer {
     margin-top: 3rem;
     font-size: 1.5rem;
 }
-footer .link{
+
+footer .link {
     font-size: 1.3rem;
     font-weight: 600;
     color: var(--text-color);
 }
-footer .link:hover{
-    font-size: 1.3rem;
-    font-weight: 600;
+
+footer .link:hover {
     color: var(--lightgreen);
 }
 
