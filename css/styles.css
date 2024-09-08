@@ -255,7 +255,7 @@ section.home h3,
 section.home h1, 
 section.home p.story {
     color: var(--text-color); 
-    animation: fadeInUp 1.2s ease-in-out; /* Standardanimation */
+    animation: fadeInUp 1.2s ease-in-out;
 }
 
 section.home h3 {
@@ -613,7 +613,7 @@ section .counter .box span {
 }
 
 .projekten .heading span {
-    color: var(--text-color); /* Gleicher Stil wie im Portfolio-Bereich */
+    color: var(--text-color); 
 }
 
 .project-container {
@@ -723,7 +723,7 @@ section .counter .box span {
 }
 
 .kontakt .heading span {
-    color: var(--text-color); /* Konsistent mit anderen Abschnitten */
+    color: var(--text-color); 
 }
 
 .kontakt .row {
@@ -755,7 +755,7 @@ section .counter .box span {
 
 .kontakt .info h3 i {
     margin-right: 0.5rem;
-    color: var(--lightgreen); /* Konsistente Farbgestaltung */
+    color: var(--lightgreen); 
 }
 
 .kontakt form {
@@ -794,7 +794,7 @@ section .counter .box span {
 
 .kontakt form .btn:hover {
     background-color: var(--lightgreen);
-    color: var(--body-bg-color); /* Hintergrundfarbe beim Hover */
+    color: var(--body-bg-color); 
 }
 
 .kontakt .follow {
@@ -821,7 +821,7 @@ section .counter .box span {
 
 .kontakt .contact-links .icon:hover {
     transform: scale(1.1);
-    color: var(--lightgreen); /* Farbe beim Hover für Konsistenz */
+    color: var(--lightgreen); 
 }
 
 /* ####################################################### */
