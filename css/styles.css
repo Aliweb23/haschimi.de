@@ -61,7 +61,7 @@ header {
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     z-index: 1000;
@@ -154,7 +154,7 @@ header.toggle .navbar {
     top: 35%;
     left: 0;
     width: 100%;
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
     background: var(--body-bg-color);
     border-radius: 5%;
 }
@@ -355,7 +355,7 @@ section .story:hover {
     }
 }
 /* ###################################################### */
-//* Allgemeines Styling für den About-Abschnitt */
+/* Allgemeines Styling für den About-Abschnitt */
 section.about {
     background-color: var(--dashboard-bg-color);
     padding: 2.5rem 1.25rem;
